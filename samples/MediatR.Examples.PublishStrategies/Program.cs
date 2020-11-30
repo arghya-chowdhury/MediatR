@@ -24,7 +24,7 @@ namespace MediatR.Examples.PublishStrategies
 
             var pinged = new Pinged();
 
-            foreach (PublishStrategy strategy in Enum.GetValues(typeof(PublishStrategy)))
+            foreach (PublishStrategy strategy in Enumeration.GetAll<PublishStrategy>())
             {
                 Console.WriteLine($"Strategy: {strategy}");
                 Console.WriteLine("----------");
